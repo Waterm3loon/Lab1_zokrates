@@ -1,0 +1,6 @@
+from "hashes/sha256/256bitPadded" import main as sha256;
+
+def main(private u32[8] preimage, public u32[8] hash) -> bool {
+    u32[8] h = sha256(preimage);
+    return h == hash;
+}
